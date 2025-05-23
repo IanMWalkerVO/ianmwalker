@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     padding-top: 0; /* Remove default padding for mobile */
     background-color: #060606;
-    padding-bottom: 65px;
+    padding-bottom: 95px;
 }
 
 /* Fixed Header styles */
@@ -27,6 +27,7 @@ body {
 @media (min-width: 992px) {
     body {
         padding-top: 260px; /* Add padding for fixed header on desktop */
+        padding-bottom: 65px;
     }
 
     .fixed-header {
