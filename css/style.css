@@ -24,7 +24,7 @@ body {
 }
 
 /* Make header fixed on desktop */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     body {
         padding-top: 260px; /* Add padding for fixed header on desktop */
     }
@@ -174,12 +174,16 @@ body {
 
 .track-info {
     line-height: 1.2;
+    max-width: 70%;
 }
 
 .track-title {
     font-weight: 500;
     font-size: 0.9rem;
     color: var(--bs-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .track-artist {
