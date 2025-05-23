@@ -56,6 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function togglePlay() {
         if (audioPlayer.paused) {
+            if (!currentAlbumCard) {
+                // Auto-select first album if none selected
+                const firstAlbumCard = albumCards[0];
+                if (firstAlbumCard) {
+                    const audioSrc = firstAlbumCard.dataset.audio;
+                    audioPlayer.src = audioSrc;
+                    firstAlbumCard.classList.add('active');
+                    currentAlbumCard = firstAlbumCard;
+                    
+                    // Update track info
+                    const title = firstAlbumCard.querySelector('.card-title').textContent;
+                    const subtitle = firstAlbumCard.querySelector('.card-text').textContent;
+                    trackTitleEl.textContent = title;
+                    trackArtistEl.textContent = subtitle;
+                }
+            }
             audioPlayer.play();
             playPauseIcon.classList.replace('fa-play', 'fa-pause');
             if (currentAlbumCard) {
