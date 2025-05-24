@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Album card click handling
     albumCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function(e) {
+            // Don't trigger playback if clicking on a purchase link
+            if (e.target.closest('.purchase-links')) {
+                return;
+            }
+            
             const audioSrc = this.dataset.audio;
             
             // If clicking the same card that's currently playing
