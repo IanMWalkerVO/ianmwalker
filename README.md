@@ -34,6 +34,8 @@ To add a new album to the portfolio, follow these steps:
             <div class="card-body">
                 <h5 class="card-title text-truncate">Album Title</h5>
                 <p class="card-text">Role Description</p>
+            </div>
+            <div class="card-footer">
                 <div class="purchase-links">
                     <a href="PURCHASE-URL" target="_blank" class="btn btn-sm btn-outline-primary">
                         Store Name
