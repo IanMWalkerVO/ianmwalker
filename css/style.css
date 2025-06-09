@@ -9,7 +9,7 @@ body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     padding-top: 0; /* Remove default padding for mobile */
     background-color: #060606;
-    padding-bottom: 95px;
+    padding-bottom: 85px;
 }
 
 /* Fixed Header styles */
