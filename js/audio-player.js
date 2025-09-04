@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentAlbumCard = null;
 
+    const hidePopover = () => {
+        // get the first card-img-top in the main-content
+        const cardImgTop = this.querySelector('.card-img-top');
+        // get popover instance
+        const popover = bootstrap.Popover.getInstance(cardImgTop);
+        popover.hide();
+    }
+
     // Album card click handling
     albumCards.forEach(card => {
         card.addEventListener('click', function(e) {
@@ -22,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (e.target.closest('.purchase-links')) {
                 return;
             }
-            
+
+            hidePopover();
+
             const audioSrc = this.dataset.audio;
             
             // If clicking the same card that's currently playing
@@ -77,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     trackArtistEl.textContent = subtitle;
                 }
             }
+            hidePopover();
             audioPlayer.play();
             playPauseIcon.classList.replace('fa-play', 'fa-pause');
             if (currentAlbumCard) {

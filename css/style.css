@@ -18,9 +18,40 @@ body {
     background: #181818;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 1.5rem 0;
-    z-index: 1000;
+    z-index: 1200;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 1rem;
+}
+
+.modal {
+    z-index: 1300; /* Ensure modals are above the fixed header */
+}
+
+.popover {
+    --bs-popover-border-color: rgba(0, 123, 255, .5);
+    font-size: 16px;
+    --bs-popover-body-color: #fff;
+    --bs-popover-bg: #181818;
+    text-align: center;
+    animation: popover-bounce-x 1.2s infinite ease-in-out;
+}
+
+@keyframes popover-bounce-x {
+    0% {
+        margin-left: 0;
+    }
+    25% {
+        margin-left: 8px;
+    }
+    50% {
+        margin-left: -8px;
+    }
+    75% {
+        margin-left: 8px;
+    }
+    100% {
+        margin-left: 0;
+    }
 }
 
 /* Make header fixed on desktop */
