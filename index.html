@@ -560,47 +560,51 @@ If you’re looking for a British male voice with warmth, versatility, and relia
 </main>
 
 
-    <!-- Audio Player Bar -->
-	
-	<audio controls aria-label="Audio sample player for Ian M. Walker narration samples">
+<!-- Audio Player Bar -->
 
-    <div class="audio-player-bar">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-3 d-flex align-items-center">
-                    <button class="play-pause-btn me-3" id="playPauseBtn">
-                        <i class="fas fa-play"></i>
+<audio controls aria-label="Audio sample player for Ian M. Walker narration samples"></audio>
+
+<div class="audio-player-bar">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-3 d-flex align-items-center">
+                <button class="play-pause-btn me-3" id="playPauseBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <div class="track-info">
+                    <div class="track-title text-truncate"></div>
+                    <div class="track-artist text-truncate"></div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="timeline-container">
+                    <div class="current-time">0:00</div>
+                    <div class="progress-bar-container">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="duration">0:00</div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="volume-container d-none d-md-flex align-items-center">
+                    <button class="volume-btn me-2">
+                        <i class="fas fa-volume-up"></i>
                     </button>
-                    <div class="track-info">
-                        <div class="track-title text-truncate"></div>
-                        <div class="track-artist text-truncate"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="timeline-container">
-                        <div class="current-time">0:00</div>
-                        <div class="progress-bar-container">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 0%"></div>
-                            </div>
-                        </div>
-                        <div class="duration">0:00</div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="volume-container d-none d-md-flex align-items-center">
-                        <button class="volume-btn me-2">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                        <div class="volume-slider">
-                            <input type="range" class="form-range" min="0" max="100" value="100" id="volumeControl">
-                        </div>
+                    <div class="volume-slider">
+                        <input type="range" class="form-range" min="0" max="100" value="100" id="volumeControl">
                     </div>
                 </div>
             </div>
         </div>
-        <audio id="audioPlayer" src=""></audio>
     </div>
+
+    <audio id="audioPlayer" src=""></audio>
+</div>
+
 
     <!-- Bio Modal -->
     <div class="modal fade" id="bioModal" tabindex="-1" aria-labelledby="bioModalLabel" aria-hidden="true">
