@@ -396,7 +396,6 @@ body {
 .card-img-container {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1 / 1.3; /* tweak as needed */
 }
 
 
